@@ -1,0 +1,39 @@
+/* src/components/Header.css */
+
+header {
+    background-color: #333;    /* Dark background color */
+    color: white;              /* Text color */
+    padding: 20px;             /* Padding inside the header */
+    border-radius: 25px;       /* Rounds the corners of the header */
+    max-width: 450px;          /* Limit the width of the header */
+    margin: 20px;              /* Add margin to space it from the top-left of the page */
+  }
+  
+  /* Style for the navigation list */
+  .nav-list {
+    list-style-type: none;     /* Remove bullet points */
+    display: flex;             /* Align the items in a row */
+    justify-content: flex-start; /* Align links to the left */
+    padding: 0;                /* Remove extra padding from ul */
+    margin: 0;
+  }
+  
+  /* Style for individual list items and links */
+  .nav-list li {
+    margin-right: 15px;        /* Spacing between links */
+  }
+  
+  .nav-list li a {
+    color: white;              /* Link text color */
+    text-decoration: none;     /* Remove underline */
+    font-size: 18px;           /* Font size for links */
+    padding: 10px 20px;        /* Add padding inside each link */
+    border-radius: 10px;       /* Rounded corners for links */
+    transition: background-color 0.3s ease;  /* Smooth transition for hover */
+  }
+  
+  /* Hover effect for the links */
+  .nav-list li a:hover {
+    background-color: #555;    /* Slightly lighter background on hover */
+  }
+  
