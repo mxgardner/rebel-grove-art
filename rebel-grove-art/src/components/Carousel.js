@@ -1,32 +1,32 @@
 // src/components/Carousel.js
 import React, { useState, useRef, useEffect } from 'react';
-import './Carousel.css'; // Make sure you have this file for styling
+import './Carousel.css'; 
 
 const Carousel = () => {
-  const [rotation, setRotation] = useState(0); // Tracks the current rotation
-  const [isDragging, setIsDragging] = useState(false); // Detect if dragging
-  const [startX, setStartX] = useState(0); // Tracks the initial drag position
+  const [rotation, setRotation] = useState(0); 
+  const [isDragging, setIsDragging] = useState(false); 
+  const [startX, setStartX] = useState(0); 
   const carouselRef = useRef(null);
 
   // Function to handle mouse or touch start
   const handleDragStart = (e) => {
     setIsDragging(true);
-    const clientX = e.touches ? e.touches[0].clientX : e.clientX; // Get touch or mouse X position
-    setStartX(clientX); // Capture the starting X position
+    const clientX = e.touches ? e.touches[0].clientX : e.clientX; 
+    setStartX(clientX); 
   };
 
   // Function to handle mouse or touch move
   const handleDragMove = (e) => {
     if (!isDragging) return;
-    const clientX = e.touches ? e.touches[0].clientX : e.clientX; // Get touch or mouse X position
-    const newRotation = rotation + (clientX - startX) / 2; // Adjust rotation
+    const clientX = e.touches ? e.touches[0].clientX : e.clientX; 
+    const newRotation = rotation + (clientX - startX) / 2; 
     setRotation(newRotation);
-    setStartX(clientX); // Update the start X position for smooth rotation
+    setStartX(clientX); 
   };
 
   // Function to handle mouse or touch end
   const handleDragEnd = () => {
-    setIsDragging(false); // Stop dragging when mouse/touch is released
+    setIsDragging(false); 
   };
 
   useEffect(() => {
@@ -62,11 +62,11 @@ const Carousel = () => {
         ref={carouselRef}
       >
         {/* These are the carousel items */}
-        <div className="carousel-item" style={{ backgroundImage: 'url(/path/to/art1.jpg)' }}></div>
-        <div className="carousel-item" style={{ backgroundImage: 'url(/path/to/art2.jpg)' }}></div>
-        <div className="carousel-item" style={{ backgroundImage: 'url(/path/to/art3.jpg)' }}></div>
-        <div className="carousel-item" style={{ backgroundImage: 'url(/path/to/art4.jpg)' }}></div>
-        <div className="carousel-item" style={{ backgroundImage: 'url(/path/to/art5.jpg)' }}></div>
+        <div className="carousel-item" style={{ backgroundImage: `url('/artworks/ghostGirl.png')` }}></div>
+        <div className="carousel-item" style={{ backgroundImage: `url('/artworks/mauveSkeleton.png')` }}></div>
+        <div className="carousel-item" style={{ backgroundImage: `url('/artworks/ciggy.png')` }}></div>
+        <div className="carousel-item" style={{ backgroundImage: `url('/artworks/landscape.png')` }}></div>
+        <div className="carousel-item" style={{ backgroundImage: `url('/artworks/redSkeleton.png')` }}></div>
       </div>
     </div>
   );

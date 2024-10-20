@@ -1,14 +1,13 @@
-// src/pages/Portfolio.js
 import React from 'react';
 import Gallery from '../components/Gallery';
 
-const Portfolio = () => {
+const Maisie = () => {
   return (
     <div>
-      <h1>Portfolio</h1>
+      <h1>Insert Portfolio</h1>
       <Gallery />
     </div>
   );
 }
 
-export default Portfolio;
+export default Maisie;

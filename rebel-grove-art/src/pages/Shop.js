@@ -1,10 +1,10 @@
 // src/pages/Contact.js
 import React from 'react';
 
-const Contact = () => {
+const Shop = () => {
   return (
     <div>
-      <h1>Contact</h1>
+      <h1>Shop</h1>
       <p>Feel free to reach out for commissions or collaborations.</p>
       <form>
         <div>
@@ -25,4 +25,4 @@ const Contact = () => {
   );
 }
 
-export default Contact;
+export default Shop;
