@@ -43,3 +43,13 @@ footer {
   max-width: 100%;
 }
 
+@font-face {
+  font-family: 'Basteleur';
+  src: url('./fonts/Basteleur-Bold.ttf') format('truetype');
+  font-weight: bold;
+}
+
+body {
+  font-family: 'Basteleur', sans-serif;
+}
+

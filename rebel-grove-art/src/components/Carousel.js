@@ -7,11 +7,13 @@ const Carousel = () => {
   const [isDragging, setIsDragging] = useState(false); 
   const [startX, setStartX] = useState(0); 
   const carouselRef = useRef(null);
+  const rotationInterval = useRef(null);
 
   // Function to handle mouse or touch start
   const handleDragStart = (e) => {
     setIsDragging(true);
     const clientX = e.touches ? e.touches[0].clientX : e.clientX; 
+    clearInterval(rotationInterval.current);
     setStartX(clientX); 
   };
 
@@ -27,7 +29,23 @@ const Carousel = () => {
   // Function to handle mouse or touch end
   const handleDragEnd = () => {
     setIsDragging(false); 
+    startAutoRotation();
   };
+
+  // Start automatic rotation
+  const startAutoRotation = () => {
+    rotationInterval.current = setInterval(() => {
+      setRotation((prevRotation) => prevRotation + 1);
+    }, 25); 
+  };
+
+  useEffect(() => {
+    startAutoRotation();
+
+    return () => {
+      clearInterval(rotationInterval.current);
+    };
+  }, []);
 
   useEffect(() => {
     // Add event listeners for mouse move, touch move, and end events

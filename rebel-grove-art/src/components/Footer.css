@@ -1,0 +1,7 @@
+footer {
+    background-color: transparent; /* Change the background color */
+    text-align: left; /* Align the text to the left */
+    padding: 20px; /* Add padding to give space around the text */
+    color: inherit; /* Ensure the text color matches the rest of the page */
+  }
+  
