@@ -1,0 +1,29 @@
+/* General page styles */
+h1 {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 36px;
+} 
+.intro-paragraph {
+    max-width: 600px;
+    margin: 0 auto 40px auto;
+    text-align: center;
+    line-height: 1.6;
+    font-size: 18px;
+    color: #333;
+  }
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Adjust columns as needed */
+    grid-gap: 10px; /* Gap between the items */
+    justify-items: center; /* Center items horizontally */
+}
+.gallery-item {
+    border-radius: 10px;
+    overflow: hidden; /* Ensure content doesn't overflow the item */
+}
+.gallery-item img {
+    width: 100%; /* Make the image take the full width of its container */
+    height: auto; /* Maintain aspect ratio */
+    display: block;
+}

@@ -23,13 +23,10 @@ nav a {
 }
 
 footer {
-  text-align: center;
+  background-color: transparent;
+  text-align: left;
   padding: 20px;
-  background-color: #333;
-  color: white;
-  position: absolute;
-  bottom: 0;
-  width: 100%;
+  color: inherit;
 }
 
 .gallery {
@@ -49,7 +46,63 @@ footer {
   font-weight: bold;
 }
 
-body {
-  font-family: 'Basteleur', sans-serif;
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Basteleur', sans-serif; /* Apply Basteleur to all headers */
 }
+.header, .nav-list, .nav-list li, .nav-list a {
+  font-family: 'Basteleur', sans-serif; /* Use Basteleur for the navigation */
+  font-weight: bold; /* Ensure the bold style matches the Basteleur-Bold.ttf font */
+}
+
+@font-face {
+  font-family: 'Karrik';
+  src: url('./fonts/Karrik-Italic.ttf') format('truetype');
+  font-weight: italic;
+}
+
+body {
+  font-family: 'Karrik', sans-serif;
+}
+
+h1 {
+  text-align: center; 
+  font-size: 3rem; 
+  margin-top: 20px; 
+  color: #333; 
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr); /* Default two columns */
+  gap: 20px;
+  margin-top: 20px;
+}
+
+@media (max-width: 768px) {
+  .product-grid {
+    grid-template-columns: 1fr; /* Single column on smaller screens */
+  }
+}
+
+.product-item {
+  background-color: #f9f9f9;
+  padding: 20px 20px 10px 20px; /* Reduce bottom padding */
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  width: 90%;
+  max-width: 800px;
+  margin: 0 auto;
+  box-sizing: border-box; /* Ensures padding doesn’t affect width */
+}
+
+.product-item * {
+  margin-bottom: 0; /* Remove bottom margin from child elements */
+}
+
+.product-item img, 
+.product-item button, 
+.product-item span {
+  vertical-align: top; /* Fixes spacing for inline elements */
+}
+
 

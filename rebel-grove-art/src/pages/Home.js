@@ -5,8 +5,10 @@ import '../App.css';
 
 const Home = () => {
   return (
-    <div>
-      <h1>Welcome to the Art Studio</h1>
+    <div className="home-container">
+      <div className="rotating-text-wrapper">
+        <h1 className="rotating-text">Welcome to the Art Studio</h1>
+      </div>
       <Carousel />
     </div>
   );
